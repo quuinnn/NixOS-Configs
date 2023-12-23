@@ -7,7 +7,7 @@ Comes with Flatpak and the GNOME DE
 use `flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo` for Flathub.org repository
 
 # How to use
-It is recommended to do this on a fresh install
+It is recommended to do this on a fresh install of the NixOS 23.11 GNOME Graphical ISO image. Also, before flashing it onto a disk or a USB or whatever, verify the SHA-256 graphically with [QuickHashGUI](https://github.com/tedsmith/quickhash) (Github) or use [Popsicle USB Flasher](https://github.com/pop-os/popsicle) (Github) which has a built in feature for that.
 
 Copy the files from this repos /etc/nixos/ to your the location of your configuration.nix file (usually /etc/nixos/) and edit them as needed
 
