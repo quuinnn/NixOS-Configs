@@ -7,6 +7,8 @@ Comes with Flatpak and the GNOME DE
 use `flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo` for Flathub.org repository
 
 # How to use
+It is recommended to do this on a fresh install
+
 Copy the files from this repos /etc/nixos/ to your the location of your configuration.nix file (usually /etc/nixos/) and edit them as needed
 
 To disallow nonfree packages, comment out (or remove it or set it to false) line 97 (nixpkgs.config.allowUnfree = true;). With disallowing nonfree packages you'll need to remove steam.nix and nvidia.nix aswell due those software being proprietary. Refer to below for that.
@@ -67,3 +69,6 @@ python311Packages.icoextract (icoextract)
 Mullvad VPN
 
 Flatpak
+
+# License
+It's just a modified version of the BSD 3 License without any copyright. It allows you to modify this for any usage but with ZERO warranty and that's all no publishing of the source code needed or anything else. For more information, [read this](https://github.com/fortunef/NixOS-Configs/blob/main/LICENSE).
