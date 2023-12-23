@@ -71,4 +71,4 @@ Mullvad VPN
 Flatpak
 
 # License
-It's just a modified version of the BSD 3 License without any copyright. It allows you to modify this for any usage but with ZERO warranty and that's all no publishing of the source code needed or anything else. For more information, [read this](https://github.com/fortunef/NixOS-Configs/blob/main/LICENSE).
+It's just a modified version of the BSD 3 License without any copyright. It allows you to modify this for any usage but with ZERO warranty and that is all. For more information, [read this](https://github.com/fortunef/NixOS-Configs/blob/main/LICENSE).
