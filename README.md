@@ -11,9 +11,11 @@ use `flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flat
 # How to use
 It is recommended to do this on a fresh install of the NixOS 23.11 GNOME Graphical ISO image on physical hardware. Also, before flashing it onto a disk or a USB or whatever, verify the SHA-256 graphically with [QuickHashGUI](https://github.com/tedsmith/quickhash) (Github) or use [Popsicle USB Flasher](https://github.com/pop-os/popsicle) (Github) which has a built in feature for that.
 
-Copy the files from this repos /etc/nixos/ to your the location of your configuration.nix file (usually /etc/nixos/) and edit them as needed
+Copy the files from this repos /etc/nixos/ directory into any folder. Edit them according to below and when you're done, copy them to the directory of your configuration.nix file (usually /etc/nixos/) and run `sudo nixos-rebuild switch`. Sudo Privledges required for almost all of that.
 
 To disallow nonfree packages, comment out (or remove it or set it to false) line 97 (nixpkgs.config.allowUnfree = true;). With disallowing nonfree packages you'll need to remove steam.nix and nvidia.nix aswell due those software being proprietary. Refer to below for that.
+
+If you do not want Mullvad VPN remove or comment out line 102 and 158
 
 If you have only 1 NVIDIA GPU and want the proprietary NVIDIA drivers and have no iGPU or just don't want NVIDIA Prime Offload, remove (or comment out) lines 44 to 49 of nvidia.nix **❗❗(UNTESTED CONFIGURATION USE AT YOUR OWN RISK)❗❗**
 
@@ -24,8 +26,6 @@ If you don't use a NVIDIA GPU (or don't want the proprietary NVIDIA drivers), ge
 If you do have an NVIDIA GPU and want the proprietary NVIDIA drivers, edit line 46 and 47 with the correct PCI Bus IDs using `lspci | grep VGA` (if that doesnt work, temporarily install pciutils with `nix-shell -p pciutils` [or [fully install it](https://search.nixos.org/packages?channel=23.11&show=pciutils&from=0&size=50&sort=relevance&type=packages&query=pciutils)]) and copy the IDs to there according to the formatting required by the [NixOS Wiki](https://nixos.wiki/wiki/Nvidia)
 
 If you don't want Steam just remove the steam.nix file `sudo rm -rf /etc/nixos/steam.nix` and comment out (or remove) line 12 (./steam.nix) from configuration.nix
-
-After you've finished, run `sudo nixos-rebuild switch --upgrade` to upgrade your system and apply the changes
 ## Packages in order as in the configuration.nix file
 mullvad-vpn (Mullvad VPN)
 
