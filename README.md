@@ -71,6 +71,8 @@ python3 (Python3)
 
 python311Packages.icoextract (icoextract)
 
+and alot more im not willing to list out because itll be time consuming
+
 # Services
 Mullvad VPN
 
