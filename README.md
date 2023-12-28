@@ -79,4 +79,4 @@ Mullvad VPN
 Flatpak
 
 # License
-This is licensed under the MIT License. It allows you to modify this for any usage but with ZERO warranty and that is all. For more information, [read this](https://github.com/fortunef/NixOS-Configs/blob/main/LICENSE).
+This is licensed under the MIT License. It allows you to modify this for any usage but with **ZERO** warranty and that is all. For more information, [read this](https://github.com/fortunef/NixOS-Configs/blob/main/LICENSE).
