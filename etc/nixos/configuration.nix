@@ -10,9 +10,11 @@
       ./hardware-configuration.nix
       ./nvidia.nix
       ./steam.nix
+      ./hyprland.nix
+      ./home-manager.nix
       #./catppuccin.nix
     ];
-
+   
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -24,6 +26,8 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -52,6 +56,9 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+  # Enables the K Desktop Environment
+  #services.xserver.displayManager.sddm.enable = true;
+  #services.xserver.desktopManager.plasma5.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -61,6 +68,9 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+
+# Auto Update  
+  
 
   # Enable sound with pipewire.
   sound.enable = true;
@@ -86,7 +96,7 @@
   users.users.quinn = {
     isNormalUser = true;
     description = "Quinn";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     packages = with pkgs; [
       firefox
     #  thunderbird
@@ -101,26 +111,75 @@
   environment.systemPackages = with pkgs; [
   pkgs.mullvad-vpn
   pkgs.sassc
+  pkgs.cinnamon.nemo-fileroller
+  pkgs.conky
+  pkgs.xfce.xfce4-settings
+  pkgs.adw-gtk3
+  pkgs.brillo
+  pkgs.p7zip
+  pkgs.cinnamon.nemo-with-extensions
+  pkgs.protontricks
+  #pkgs.cinnamon.nemo
+  pkgs.gnome.zenity
+  #pkgs.xfce.thunar
+  #pkgs.xfce.thunar-archive-plugin
+  pkgs.nwg-look
+  pkgs.gnome.gnome-boxes
+  pkgs.vinegar
+  pkgs.xarchive
+  pkgs.xarchiver
+  pkgs.pavucontrol
+  #pkgs.libsForQt5.dolphin
+  libsForQt5.qtstyleplugin-kvantum # Hyprland?
+  pkgs.hyprpaper # Very Hyprland
+  pkgs.pywal # Hyprland
+  pkgs.lxappearance # Hyprland
+  pkgs.pamixer # Hyprland
+  pkgs.wofi # Hyprland
+  pkgs.kitty # Hyprland
+  pkgs.waybar # Hyprland
   pkgs.gnome.gnome-disk-utility
+  pkgs.networkmanagerapplet
   pkgs.gnome.gnome-software
-  pkgs.vim
+  #pkgs.vim
+  pkgs.wine-staging
+  pkgs.flameshot # Hyprland
   pkgs.gnome.gnome-tweaks
-  pkgs.wine
-  pkgs.fish
+  #pkgs.wine # Wine Staging better cuz 9.0
+  pkgs.python311Packages.pip
+  pkgs.alacritty # Hyprland
+  pkgs.cliphist # Hyprland
+  pkgs.zathura # Hyprland
+  pkgs.rofi-wayland #Hyprland
+  pkgs.dunst # Hyprland
+  pkgs.swaylock-effects # Hyprland
   pkgs.ungoogled-chromium
-  #pkgs.mullvad-browser # I INSTALL WITH DA FLATPAK
+  pkgs.mullvad-browser # I INSTALL WITH DA FLATPAK
   pkgs.neofetch
   pkgs.pridefetch
   pkgs.fastfetch
   pkgs.micro
+  pkgs.steamtinkerlaunch
+  pkgs.heroic
+  pkgs.lutris
+  pkgs.obs-studio
   pkgs.gedit
   pkgs.emacs
   pkgs.gnome.gnome-terminal
   pkgs.git
+  pkgs.cmake
+  pkgs.meson
+  pkgs.vim-full
+  pkgs.gnumake
   pkgs.starship
   pkgs.gamemode
+  pkgs.eww # Hyprland
   pkgs.mangohud
+  pkgs.gradience
+  pkgs.latte-dock
   pkgs.python3
+  pkgs.wget
+  #pkgs.libsForQt5.systemsettings
   pkgs.python311Packages.icoextract
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
@@ -156,5 +215,19 @@
   
   services.flatpak.enable = true;
   services.mullvad-vpn.enable = true;
+
+  system.autoUpgrade = {
+      enable = true;
+};
+#programs.fish.enable = true;
+  users.defaultUserShell = pkgs.fish;
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+  #programs.nix-ld.enable = true;
+  #programs.nix-ld.libraries = with pkgs; [
+  # [REDACTED]
+    # Add any missing dynamic libraries for unpackaged programs
+    # here, NOT in environment.systemPackages
+ # ];
 
 }
