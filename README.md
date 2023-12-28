@@ -40,16 +40,24 @@ If you want my ALL packages. I installed [Nix Software Centre](https://github.co
 
 # My dots
 My GTK Theme:
+
 https://github.com/EliverLara/Nordic
 
 My Waybar Theme:
+
 https://github.com/BHlmaoMSD/dotfiles (I modified it a bit check this repos [$HOME/.config/waybar/](https://github.com/fortunef/NixOS-Configs/tree/main/home/quinn/.config/waybar) directory.
 
 My Hyprland config:
+
 https://github.com/sameemul-haque/dotfiles (I heavily modified it to make it for my liking but I based it off of that so I'm crediting them although it's currently public domain)
 
 My Rofi theme:
-https://github.com/adi1090x/rofi 
+
+https://github.com/adi1090x/rofi
+
+My Kitty theme:
+
+Is my own but with [pywal](https://github.com/dylanaraps/pywal)
 
 
 
