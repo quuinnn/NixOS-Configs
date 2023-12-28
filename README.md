@@ -8,6 +8,15 @@ Comes with Flatpak, the GNOME DE and Hyprland
 
 use `flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo` for Flathub.org repository
 
+# Previews
+![2023-12-28-224757_hyprshot](https://github.com/fortunef/NixOS-Configs/assets/141419112/0908c90e-230a-477e-a114-60b2bdc7e3b3)
+![2023-12-28-225217_hyprshot](https://github.com/fortunef/NixOS-Configs/assets/141419112/a1c0ef50-411b-43f4-98e9-7cb657b28bc9)
+![2023-12-28-225256_hyprshot](https://github.com/fortunef/NixOS-Configs/assets/141419112/50e2bca0-c222-4b33-92b0-226830393926)
+![nord-lake](https://github.com/fortunef/NixOS-Configs/assets/141419112/74aac9ea-3132-43c3-bc4c-10adb569c2dc)
+
+
+
+
 # How to use
 It is recommended to do this on a fresh install of the NixOS 23.11 GNOME Graphical ISO image on physical hardware. Also, before flashing it onto a disk or a USB or whatever, verify the SHA-256 graphically with [QuickHashGUI](https://github.com/tedsmith/quickhash) (Github) or use [Popsicle USB Flasher](https://github.com/pop-os/popsicle) (Github) which has a built in feature for that.
 
@@ -71,12 +80,18 @@ python3 (Python3)
 
 python311Packages.icoextract (icoextract)
 
-and alot more im not willing to list out because itll be time consuming
+I also installed [Nix Software Centre](https://github.com/snowfallorg/nix-software-center) (Github) but I didn't do that declaratively but with the "'nix profile' installation".
+
+and alot more im not willing to list out because it'll be time consuming
 
 # Services
 Mullvad VPN
 
 Flatpak
+
+Libvirtd
+
+and the pre-installed NixOS GUI Install Services
 
 # License
 This is licensed under the MIT License. It allows you to modify this for any usage but with **ZERO** warranty and that is all. For more information, [read this](https://github.com/fortunef/NixOS-Configs/blob/main/LICENSE).
