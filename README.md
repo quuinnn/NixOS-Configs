@@ -4,7 +4,7 @@ My NixOS Configuration files so if I need a fresh install of NixOS it'll be WAY 
 
 This configuration has been tested to work on a ThinkPad L13 Yoga Gen 3, and a HP Pavilion Gaming Laptop (2020 version). Other Laptops (or Desktop PCs) will most likely still work.
 
-Comes with Flatpak and the GNOME DE
+Comes with Flatpak, the GNOME DE and Hyprland
 
 use `flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo` for Flathub.org repository
 
