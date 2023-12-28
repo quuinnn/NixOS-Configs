@@ -35,54 +35,23 @@ If you don't use a NVIDIA GPU (or don't want the proprietary NVIDIA drivers), ge
 If you do have an NVIDIA GPU and want the proprietary NVIDIA drivers, edit line 46 and 47 with the correct PCI Bus IDs using `lspci | grep VGA` (if that doesnt work, temporarily install pciutils with `nix-shell -p pciutils` [or [fully install it](https://search.nixos.org/packages?channel=23.11&show=pciutils&from=0&size=50&sort=relevance&type=packages&query=pciutils)]) and copy the IDs to there according to the formatting required by the [NixOS Wiki](https://nixos.wiki/wiki/Nvidia)
 
 If you don't want Steam just remove the steam.nix file `sudo rm -rf /etc/nixos/steam.nix` and comment out (or remove) line 12 (./steam.nix) from configuration.nix
-## Packages in order as in the configuration.nix file
-mullvad-vpn (Mullvad VPN)
 
-sassc (sassc)
+If you want my ALL packages. I installed [Nix Software Centre](https://github.com/snowfallorg/nix-software-center) (Github) but I didn't do that declaratively but with the "'nix profile' installation".
 
-gnome.gnome-disk-utility (GNOME Disks)
+# My dots
+My GTK Theme:
+https://github.com/EliverLara/Nordic
 
-gnome.gnome-software (GNOME Software)
+My Waybar Theme:
+https://github.com/BHlmaoMSD/dotfiles (I modified it a bit check this repos [$HOME/.config/waybar/](https://github.com/fortunef/NixOS-Configs/tree/main/home/quinn/.config/waybar) directory.
 
-vim (Vi Improved)
+My Hyprland config:
+https://github.com/sameemul-haque/dotfiles (I heavily modified it to make it for my liking but I based it off of that so I'm crediting them although it's currently public domain)
 
-gnome.gnome-tweaks (GNOME Tweaks)
+My Rofi theme:
+https://github.com/adi1090x/rofi 
 
-wine (Wine)
 
-fish (Friendly Interactive Shell)
-
-ungoogled-chromium (ungoogled chromium)
-
-neofetch (neofetch)
-
-pridefetch (pridefetch)
-
-fastfetch (fastfetch)
-
-micro (micro)
-
-gedit (gedit)
-
-emacs (GNU Emacs)
-
-gnome.gnome-terminal (GNOME Terminal)
-
-git (Linus Torvalds's git protocol)
-
-starship (StarShip)
-
-gamemode (Gamemode)
-
-mangohud (MangoHud)
-
-python3 (Python3)
-
-python311Packages.icoextract (icoextract)
-
-I also installed [Nix Software Centre](https://github.com/snowfallorg/nix-software-center) (Github) but I didn't do that declaratively but with the "'nix profile' installation".
-
-and alot more im not willing to list out because it'll be time consuming
 
 # Services
 Mullvad VPN
