@@ -1,4 +1,8 @@
-# NixOS-Configs
+# NOTICE!!
+
+updating my NixOS system resulted in kernel panic, and reverting to an older snapshot did nothing. I don't feel like tinkering around with NixOS anymore so I've switched to Arch Linux Rolling (again) so this project aint being maintend no more
+
+## NixOS-Configs
 
 My NixOS Configuration files so if I need a fresh install of NixOS it'll be WAY easier
 
